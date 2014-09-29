@@ -12,8 +12,8 @@ Basic Command Line Usage:
   runnel kill <tunnel>
   runnel kill
 
-  Configuration is read from '~/.runnel/tunnels.yml'
-  PID's are stored in ~/.runnel/pids/
+  Configuration is read from 'runnelconf/tunnels.yml'
+  PID's are stored in runnelconf/pids/
 
 TXT
 
@@ -31,7 +31,7 @@ TCONF_EXAMPLE = <<YAML
 YAML
 
 class Runnel
-  RUNNEL_DIR  = ENV['HOME']+"/.runnel"
+  RUNNEL_DIR = Dir.pwd + "/runnelconf"
   PIDS_DIR  = "#{RUNNEL_DIR}/pids"
   PIDS_FILES  = "#{PIDS_DIR}/*"
   TUNNEL_CONFIG = "#{RUNNEL_DIR}/tunnels.yml"
